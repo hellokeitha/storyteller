@@ -2,7 +2,7 @@ import React from 'react'
 import { styled } from 'styled-components'
 import { FaSearch } from 'react-icons/fa'
 import { useNavigate, useParams } from 'react-router-dom'
-import DramaMain1 from '../assets/DramaMain1.jpg'
+import logo1 from '../assets/logo1.png'
 import { getStorys } from '../axios/api'
 import { useQuery } from 'react-query'
 import { UpButton } from '../components/Button'
@@ -21,22 +21,13 @@ const MainPage = () => {
   return (
     <div id='1'>
       <StContainerDiv>
-        <StSearchImgDiv>
-          <StMainImg
-            src={DramaMain1}
+        <StFaSearchDiv>
+          <FaSearch
             onClick={() => {
-              navigate('/about')
+              navigate('/search')
             }}
-          ></StMainImg>
-
-          <StFaSearchDiv>
-            <FaSearch
-              onClick={() => {
-                navigate('/search')
-              }}
-            />
-          </StFaSearchDiv>
-        </StSearchImgDiv>
+          />
+        </StFaSearchDiv>
 
         <h2>로맨스</h2>
         <div>
@@ -131,8 +122,15 @@ const MainPage = () => {
               })}
           </StCategory1Div>
         </div>
-
-        <h2>추천 페이지</h2>
+        <StSearchImgDiv>
+          <StMainImg
+            src={logo1}
+            onClick={() => {
+              navigate('/about')
+            }}
+          ></StMainImg>
+        </StSearchImgDiv>
+        <h2>추천 스토리</h2>
         <div>
           <StCategory1Div>
             <YoutubeMain />
@@ -150,34 +148,42 @@ const StContainerDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
   margin-top: 50px;
 `
 
 const StSearchImgDiv = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   padding: 16px;
+  margin-bottom: 30px;
 `
 
 const StMainImg = styled.img`
   position: relative;
 
-  height: 500px;
-  width: 1000px;
+  /* height: 100%; */
+  width: 50%;
   object-fit: cover;
   object-position: center center;
 
-  margin-top: 30px;
+  /* margin-top: 30px; */
   cursor: pointer;
 `
 
 const StFaSearchDiv = styled.div`
-  position: absolute;
-  top: -5px;
-  right: 16px;
+  text-align: center;
   font-size: 30px;
+  color: #af1f2b;
+  padding: 20px;
   cursor: pointer;
+
+  &:hover {
+    color: #e9e6d8;
+  }
 `
 
 const StCategoryInputDiv = styled.div`

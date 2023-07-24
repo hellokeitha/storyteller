@@ -10,21 +10,21 @@ const AdminPage = () => {
 
   return (
     <>
-    <StFlexAll>
-      <StH1>Admin</StH1>
-      <StLogoutButton
-        onClick={async () => {
-          alert('로그아웃을 하시겠습니까?')
-          await auth.signOut()
-          navigate('/')
-        }}
-      >
-        Logout
-      </StLogoutButton>
+      <StFlexAll>
+        <StH1>Admin</StH1>
+        <StWriteButton
+          onClick={async () => {
+            alert('로그아웃을 하시겠습니까?')
+            await auth.signOut()
+            navigate('/')
+          }}
+        >
+          Logout
+        </StWriteButton>
+        <Link to='/write'>
+          <StWriteButton>Write</StWriteButton>
+        </Link>
       </StFlexAll>
-      <Link to='/write'>
-        <StWriteButton>글 작성</StWriteButton>
-      </Link>
 
       <StList>
         <StListTitle>글목록</StListTitle>
@@ -41,10 +41,7 @@ const AdminPage = () => {
 export default AdminPage
 
 export const StFlexAll = styled.div`
-  transform: translate(0px, 0px);
-  /* margin-bottom:30px; */
-  display: flex;
-
+  margin-bottom: 30px;
 `
 export const StH1 = styled.h1`
   transform: translate(46px, 0px);
@@ -52,27 +49,30 @@ export const StH1 = styled.h1`
 export const StFlex = styled.div`
   transform: translate(80px, 0px);
   display: flex;
-  margin-bottom:30px;
+  margin-bottom: 30px;
 `
 export const StLogoutButton = styled.button`
   transform: translate(450px, 30px);
-  width:90px;
-  height:40px;
-  font-size:20px;
-  border:2px solid white;
-  color:white;
-  background-color:transparent;
+  width: 90px;
+  height: 40px;
+  font-size: 20px;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
 `
 export const StWriteButton = styled.button`
-  width:90px;
-  height:40px;
-  font-size:20px;
+  width: 90px;
+  height: 40px;
+  font-size: 20px;
+  margin: 5px;
+  cursor: pointer;
 `
 const StListTitle = styled.div`
   transform: translate(85px, 0px);
-  margin:50px auto 50px auto;
+  margin: 50px auto 50px auto;
   font-size: 25px;
-  font-weight:bolder;
+  font-weight: bolder;
   text-decoration-line: none;
   color: white;
 `
@@ -84,12 +84,12 @@ export const StListTitleBox = styled.div`
   width: 250px;
   padding: 4px;
   margin-right: 30px;
-  font-size:20px;
-  font-weight:bolder;
+  font-size: 20px;
+  font-weight: bolder;
 `
 export const StListBodyBox = styled.div`
   width: 600px;
   padding: 4px;
-  font-size:20px;
-  font-weight:bolder;
+  font-size: 20px;
+  font-weight: bolder;
 `

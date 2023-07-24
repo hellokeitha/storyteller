@@ -6,25 +6,21 @@ export const AboutContent = styled.div`
   text-align: center;
 `
 export const LoginBtn = styled.button`
-  background-color: #2d8675;
-  color: #ffffff;
+  background-color: #e9e6d8;
+  color: #2d8675;
   border: solid 1px #2d8675;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  width: 120px;
+  border-radius: 5px;
+  width: 100px;
   height: 40px;
-  font-size: 20px;
+  font-size: 18px;
+  font-family: 'Hahmlet', serif;
+  position: absolute;
+  right: 10px;
 
   &:hover {
-    height: 20px;
-    color: #2d8675;
-    background-color: #ffffff;
-    border: 1px solid #2d8675;
+    border: solde 1px #e9e6d8;
     cursor: pointer;
-    font-weight: bolder;
-    width: 120px;
-    height: 40px;
-    font-size: 20px;
+    font-size: 18px;
   }
 `
 export const Container = styled.div`

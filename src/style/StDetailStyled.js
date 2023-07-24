@@ -110,15 +110,9 @@ export const SaveButton = styled.button`
 export const Up = styled.p`
   transform: translateY(-90%);
 `
-export const UpButton = styled.button`
-  background-color: #2d8675;
+export const UpButton = styled.div`
   color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  font-size: 35px;
-  font-weight: bolder;
-  border-radius: 40px;
+  font-size: 20px;
   position: fixed;
   bottom: 60px;
   right: 120px;
@@ -127,7 +121,7 @@ export const Ytimg = styled.img`
   width: 640px;
   height: 360px;
 `
-export const YtBtn = styled.button`
+export const YtBtn = styled.div`
   transform: translate(-34px, 3px);
   background-color: #2d8675;
   color: #e9e6d8;

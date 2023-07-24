@@ -53,7 +53,7 @@ export const UpButton = () => {
     <div>
       <ScrollLink to='1'>
         <St.UpButton>
-          <St.Up>∧</St.Up>
+          <St.Up>BACK TO TOP</St.Up>
         </St.UpButton>
       </ScrollLink>
     </div>
